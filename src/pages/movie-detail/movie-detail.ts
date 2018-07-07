@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MovieListPage } from '../movie-list/movie-list';
 
 /**
  * Generated class for the MovieDetailPage page.
@@ -14,12 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'movie-detail.html',
 })
 export class MovieDetailPage {
+  movie: MovieListPage
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MovieDetailPage');
+    this.movie = this.navParams.data;
+    //console.log('ionViewDidLoad MovieDetailPage');
   }
 
 }
