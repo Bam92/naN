@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MovieDetailPage } from '../movie-detail/movie-detail';
+import { IMovie } from "../../interface/IMovie";
 
 @IonicPage()
 @Component({
@@ -8,13 +9,13 @@ import { MovieDetailPage } from '../movie-detail/movie-detail';
   templateUrl: 'movie-list.html',
 })
 export class MovieListPage {
-  movies = [
+  movies: IMovie[] = [
     {
       vote_count: 666,
       id: 19404,
       video: false,
       vote_average: 9.1,
-      title: 'Dilwale Dulhania Le Jayenge',
+      title: "Dilwale Dulhania Le Jayenge",
       popularity: 50.154262,
       poster_path:
         "https://image.tmdb.org/t/p/w185/2gvbZMtV1Zsl7FedJa5ysbpBx2G.jpg",
@@ -26,7 +27,6 @@ export class MovieListPage {
       overview:
         "Chaudhry Baldev Singh est un père de famille installé à Londres. Un jour, il reçoit une lettre d'Inde : son meilleur ami lui écrit, lui rappelant la promesse qu'il avait faite deux décennies auparavant de marier leurs enfants. Chaudhry décide alors de tenir sa promesse, mais donne toutefois un mois libre à sa fille  avant qu'elle ne s'en aille en Inde se marier...",
       release_date: "1995-10-20"
-
     },
     {
       vote_count: 8482,
@@ -64,6 +64,7 @@ export class MovieListPage {
         "Mitsuha est une lycéenne, la fille du maire d'une petite ville nichée entre les montagnes. Vivant avec sa petite sœur et sa grand-mère, c'est une demoiselle franche qui n'hésite pas à dire qu'elle n'a pas envie de participer aux rituels shinto, ou d'aider son père dans ses campagnes électorales. En fait, elle rêve de pouvoir quitter cette ville où elle s'ennuie, pour partir tenter sa chance à la capitale...",
       release_date: "2016-08-26"
     }
+
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -71,9 +72,9 @@ export class MovieListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MovieListPage');
-    
+
   }
-  goToDetail(movie) {
+  goToDetail(movie: IMovie) {
     this.navCtrl.push(MovieDetailPage, movie);
   }
 
