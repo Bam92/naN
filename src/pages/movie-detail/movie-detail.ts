@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MovieListPage } from '../movie-list/movie-list';
+//import { MovieListPage } from '../movie-list/movie-list';
+import { IMovie } from "../../interface/IMovie";
 
 /**
  * Generated class for the MovieDetailPage page.
@@ -15,7 +16,7 @@ import { MovieListPage } from '../movie-list/movie-list';
   templateUrl: 'movie-detail.html',
 })
 export class MovieDetailPage {
-  movie: MovieListPage
+  movie: IMovie;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
