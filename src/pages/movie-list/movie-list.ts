@@ -21,6 +21,7 @@ export class MovieListPage {
   ionViewDidLoad() {
     this.movieApiProvider.getMovies().subscribe(data =>{
       this.movies = data;
+      console.log("ici c movie list" + this.movies);
     })
 
   }

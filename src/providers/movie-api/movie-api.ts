@@ -27,6 +27,7 @@ export class MovieApiProvider {
   }
 
   getMovies (): Observable<any> {
+    console.log("ici c movie api" + this.http.get(`${this.baseUrl}`));
     return this.http.get(`${this.baseUrl}`);
   }
 
