@@ -1,7 +1,6 @@
 import { FavoriteMovieProvider } from "../../providers/favorite-movie/favorite-movie";
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { MovieListPage } from '../movie-list/movie-list';
 import { IMovie } from "../../interface/IMovie";
 
 @IonicPage()
